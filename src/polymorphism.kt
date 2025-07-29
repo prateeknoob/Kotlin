@@ -4,7 +4,17 @@ fun main(){
 
     println(circle.area())
     println(square.area())
+
+    val shapes= arrayOf(Circle(6.5),Square(9.1),triangle(5.5,6.1))
+    calculatearea(shapes)
 }
+
+fun calculatearea(shapes: Array<Shape>){
+    for (shape in shapes){
+        println(shape.area())
+    }
+}
+
 
 open class Shape{
     open fun area():Double{
@@ -21,5 +31,10 @@ class Circle(val radius:Double):Shape(){
 class Square(val side:Double):Shape(){
     override fun area(): Double {
         return side*side
+    }
+}
+class triangle(val base:Double,val height:Double):Shape(){
+    override fun area(): Double {
+        return 0.5*(base*height)
     }
 }

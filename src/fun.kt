@@ -10,4 +10,3 @@ fun String.extension():String{
 fun Int.lala():Int{
     return 5
 }
-
